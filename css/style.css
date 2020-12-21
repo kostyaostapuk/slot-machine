@@ -1,0 +1,199 @@
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.slot-machine {
+	position: relative;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: seagreen;
+	width: 30%;
+	padding: 5px;
+}
+.slot-machine__container {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+}
+.slot-machine__title {
+	color: gold;
+}
+.slot-machine__slots {
+	display: flex;
+	border: 2px solid gold;
+	border-radius: 5px;
+	width: 220px;
+	height: 215px;
+	margin: 5px 50px;
+	position: relative;
+}
+.slot-machine__slot {
+	background-image: url('../img/default.png');
+	background-size: cover;
+	transition: 0.2s;
+	width: 75px;
+	padding: 0 2px;
+}
+
+.slot-machine__slots hr {
+	border-right: 2px solid gold;
+	border-left: 0;
+	border-top: 0;
+	border-bottom: 0;
+	margin: 0;
+}
+.slot-machine__slots::before {
+	content: '';
+	border-top: solid 5px rgb(228, 40, 122);
+	border-right: solid 5px rgb(228, 40, 122);
+	transform: rotate(45deg);
+	height: 5px;
+	width: 5px;
+	position: absolute;
+	top: 48%;
+	left: -5%;
+}
+
+.slot-machine__slots::after {
+	content: '';
+	border-top: solid 5px rgb(228, 40, 122);
+	border-right: solid 5px rgb(228, 40, 122);
+	transform: rotate(-135deg);
+	height: 5px;
+	width: 5px;
+	position: absolute;
+	top: 48%;
+	right: -5%;
+}
+.slot-machine__title {
+	font-size: 2rem;
+}
+.slot-machine__ticker {
+	color: gold;
+	background-color: indigo;
+	width: 300px;
+	border-radius: 5px;
+}
+.slot-machine__button {
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	border-color: transparent;
+	cursor: pointer;
+}
+.slot-machine__button:active {
+	border: 0;
+}
+.slot-machine__button:focus {
+	outline: none;
+	box-shadow: none;
+}
+.slot-machine__button_primary {
+	font-size: 2rem;
+	background-color: darkolivegreen;
+	color: black;
+	border: 5px solid gold;
+	width: 40%;
+}
+.slot-machine__button_primary:focus {
+	border: 5px solid gold;
+}
+
+.light-bulbs {
+	display: flex;
+}
+.light-bulbs_v {
+	flex-direction: column;
+}
+
+.light-bulb {
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	border-radius: 50%;
+	filter: blur(2px);
+	transition: 0.5s;
+	background-color: rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+}
+.light-bulb_square {
+	width: 20px;
+	height: 40px;
+	filter: blur(1px);
+	border-radius: 5px;
+}
+.light-bulb_red {
+	background-color: red;
+	box-shadow: 0 0 5px 1px red;
+}
+.light-bulb_pink {
+	background-color: deeppink;
+	box-shadow: 0 0 5px 1px deeppink;
+}
+.light-bulb_purple {
+	background-color: indigo;
+	box-shadow: 0 0 5px 1px indigo;
+}
+.light-bulb_blue {
+	background-color: blue;
+	box-shadow: 0 0 5px 1px blue;
+}
+.light-bulb_sky {
+	background-color: darkturquoise;
+	box-shadow: 0 0 5px 1px darkturquoise;
+}
+.light-bulb_lime {
+	background-color: lime;
+	box-shadow: 0 0 5px 1px lime;
+}
+
+.mt-sm {
+	margin-top: 5px;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.fw-800 {
+	font-weight: 800;
+}
+.align-center {
+	align-items: center;
+}
+.panel {
+	position: absolute;
+	border: 1px solid gold;
+	border-radius: 5px;
+	background-color: gold;
+}
+.panel_static {
+	position: static;
+}
+.panel_left {
+	top: 30%;
+	left: 110;
+}
+.panel_right {
+	top: 30%;
+	right: 110;
+}
+.panel_top {
+	top: -5;
+}
+@keyframes blink {
+	0% {
+		color: red;
+	}
+	100% {
+		color: white;
+	}
+}
+.blink {
+	animation: blink 2s linear infinite;
+	color: white;
+	font-size: 1rem;
+	font-weight: 800;
+}
+footer {
+	text-align: right;
+}
